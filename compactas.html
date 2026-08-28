@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Piscinas Compactas | Kailon Raimers</title>
+
+  <meta name="description"
+    content="Conheça os modelos de piscinas compactas e encontre a opção ideal para o seu espaço.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f7;
+      color: #13212a;
+    }
+
+    header {
+      background: #062b3b;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 17px;
+    }
+
+    .logo span {
+      color: #52c7df;
+    }
+
+    .back {
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      opacity: .9;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(4, 35, 49, .78), rgba(4, 35, 49, .88)),
+        url("https://www.igui.com/");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 75px 20px 70px;
+    }
+
+    .tag {
+      color: #63d0e7;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 10vw, 65px);
+      line-height: 1.05;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto 0;
+      color: #d7e1e5;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .models {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 18px 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #65737a;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+      transition: transform .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pool-image {
+      height: 185px;
+      background: linear-gradient(135deg, #0c6f91, #49c3d7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card h2 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .measure {
+      display: inline-block;
+      background: #e9f6f9;
+      color: #08718d;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #68767d;
+      line-height: 1.55;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #0a6f89;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .5px;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: #07566b;
+    }
+
+    .cta {
+      background: #062b3b;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #cbd7dc;
+      max-width: 600px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 17px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #041d28;
+      color: #8da1aa;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pool-image {
+        height: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+
+      <div class="logo">
+        KAILON <span>RAIMERS</span>
+      </div>
+
+      <a href="index.html" class="back">
+        ← VOLTAR
+      </a>
+
+    </div>
+  </header>
+
+  <section class="hero">
+
+    <div class="tag">
+      CATÁLOGO DE PISCINAS
+    </div>
+
+    <h1>
+      Piscinas <span style="color:#63d0e7;">compactas</span>
+      para grandes momentos.
+    </h1>
+
+    <p>
+      Conheça alguns dos modelos ideais para quem deseja aproveitar melhor o espaço,
+      sem abrir mão de conforto, lazer e beleza.
+    </p>
+
+  </section>
+
+  <main class="models">
+
+    <h2 class="section-title">
+      Encontre o modelo ideal
+    </h2>
+
+    <p class="section-subtitle">
+      Confira as opções disponíveis e fale comigo para descobrir qual piscina
+      combina melhor com o seu projeto.
+    </p>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="pool-image">ARITA</div>
+
+        <div class="card-content">
+          <h2>Arita</h2>
+          <div class="measure">4,05 × 3,11 × 0,94 m</div>
+
+          <p>
+            Um modelo compacto com excelente aproveitamento de espaço.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Arita."
+             target="_blank">
+             QUERO CONHECER A ARITA
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">ARABÁ</div>
+
+        <div class="card-content">
+          <h2>Arabá</h2>
+          <div class="measure">3,29 × 2,35 × 1,09 m</div>
+
+          <p>
+            Uma opção prática e compacta para transformar pequenos espaços.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Arabá."
+             target="_blank">
+             QUERO CONHECER A ARABÁ
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">CETUS</div>
+
+        <div class="card-content">
+          <h2>Cetus</h2>
+          <div class="measure">2,19 × 2,11 × 0,86 m</div>
+
+          <p>
+            Uma das opções mais compactas para projetos com espaço reduzido.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Cetus."
+             target="_blank">
+             QUERO CONHECER A CETUS
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">KÉRAMOS</div>
+
+        <div class="card-content">
+          <h2>Kéramos</h2>
+          <div class="measure">2,19 × 2,19 × 0,94 m</div>
+
+          <p>
+            Design compacto e proporções ideais para diferentes projetos.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Kéramos."
+             target="_blank">
+             QUERO CONHECER A KÉRAMOS
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">FAENZA</div>
+
+        <div class="card-content">
+          <h2>Faenza</h2>
+          <div class="measure">2,97 × 2,19 × 0,94 m</div>
+
+          <p>
+            Uma solução elegante para quem busca lazer em um espaço compacto.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Faenza."
+             target="_blank">
+             QUERO CONHECER A FAENZA
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">MURANO</div>
+
+        <div class="card-content">
+          <h2>Murano</h2>
+          <div class="measure">3,99 × 2,03 × 1,00 m</div>
+
+          <p>
+            Um formato versátil para criar uma área de lazer sofisticada.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Murano."
+             target="_blank">
+             QUERO CONHECER A MURANO
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">ÁTICA</div>
+
+        <div class="card-content">
+          <h2>Ática</h2>
+          <div class="measure">4,07 × 2,04 × 1,09 m</div>
+
+          <p>
+            Um modelo compacto que combina comprimento e excelente aproveitamento.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Ática."
+             target="_blank">
+             QUERO CONHECER A ÁTICA
+          </a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="pool-image">AQUARIUM</div>
+
+        <div class="card-content">
+          <h2>Aquarium</h2>
+          <div class="measure">4,23 × 2,27 × 1,10 m</div>
+
+          <p>
+            Um modelo marcante para quem quer unir design e uma experiência diferenciada.
+          </p>
+
+          <a class="button"
+             href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20mais%20informações%20sobre%20a%20piscina%20Aquarium."
+             target="_blank">
+             QUERO CONHECER A AQUARIUM
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <section class="cta">
+
+    <h2>Encontrou um modelo que gostou?</h2>
+
+    <p>
+      Fale diretamente comigo e receba um atendimento personalizado para o seu projeto.
+    </p>
+
+    <a
+      href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20ajuda%20para%20escolher%20uma%20piscina."
+      target="_blank">
+      FALAR COM KAILON NO WHATSAPP
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Kailon Raimers · Consultor de Vendas
+  </footer>
+
+</body>
+</html>
