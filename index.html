@@ -482,31 +482,35 @@
        WHATSAPP
     ========================== */
 
-    .whatsapp {
-      position: fixed;
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  width: 64px;
+  height: 64px;
 
-      right: 20px;
-      bottom: calc(20px + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      width: 64px;
-      height: 64px;
+  background: #25d366;
+  color: white;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
 
-      border-radius: 50%;
+  font-size: 30px;
 
-      background: var(--whatsapp);
-      color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 
-      text-decoration: none;
-      font-size: 28px;
+  z-index: 1000;
 
-      z-index: 2000;
+  transition: transform 0.2s ease;
+}
 
-      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
-    }
+.whatsapp:hover {
+  transform: scale(1.08);
+}
 
     /* =========================
        FOOTER
