@@ -64,18 +64,15 @@
       margin-bottom: 35px;
     }
 
-    .main-image {
-      width: 100%;
-      height: 420px;
-      background: linear-gradient(135deg, #1d4c59, #112d35);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      color: #ffffff;
-      margin-bottom: 70px;
-    }
+.main-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 70px;
+}
 
     .section {
       margin-bottom: 70px;
@@ -306,9 +303,11 @@
     </div>
 
 
-    <div class="main-image">
-      FOTO DA PISCINA ARITA
-    </div>
+<img
+  src="arita.jpg.webp"
+  alt="Piscina Arita"
+  class="main-image"
+>
 
 
     <section class="section">
