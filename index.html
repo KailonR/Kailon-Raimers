@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kailon Raimers | Consultor de Piscinas iGUi</title>
+
+  <meta name="description" content="Encontre a piscina ideal para o seu projeto. Atendimento personalizado com Kailon Raimers, consultor de vendas.">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background: #07131d;
+    }
+
+    /* MENU */
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5, 18, 28, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #00b7ff;
+    }
+
+    .menu {
+      display: flex;
+      gap: 28px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00b7ff;
+    }
+
+    .btn-menu {
+      background: #00a8e8;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,15,25,0.95) 0%,
+          rgba(4,15,25,0.75) 45%,
+          rgba(4,15,25,0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=90");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 120px 25px 60px;
+      width: 100%;
+    }
+
+    .tag {
+      color: #00b7ff;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      max-width: 750px;
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #00b7ff;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #d7e0e5;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn-primary {
+      background: #00a8e8;
+      color: white;
+      padding: 17px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #008dcc;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+      padding: 17px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* SEÇÕES */
+
+    section {
+      padding: 100px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-tag {
+      color: #00b7ff;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      color: #aab8c2;
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* MODELOS */
+
+    .models {
+      background: #0a1a26;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: #102633;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aab8c2;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #00b7ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* DIFERENCIAIS */
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .feature {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #0a1a26;
+    }
+
+    .feature-number {
+      font-size: 35px;
+      color: #00b7ff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .feature p {
+      color: #9aabb5;
+      line-height: 1.6;
+    }
+
+    /* CONSULTOR */
+
+    .consultor {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 168, 232, 0.95),
+          rgba(0, 77, 120, 0.95)
+        );
+    }
+
+    .consultor-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .consultor h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .consultor p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .consultor-card {
+      background: white;
+      color: #102633;
+      padding: 45px;
+    }
+
+    .consultor-card h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .consultor-card p {
+      color: #52616b;
+      font-size: 16px;
+    }
+
+    /* CONTATO */
+
+    .contact {
+      text-align: center;
+      background: #07131d;
+    }
+
+    .contact h2 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #aab8c2;
+      font-size: 19px;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      line-height: 1.6;
+    }
+
+    /* WHATSAPP FLUTUANTE */
+
+    .whatsapp {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+
+      width: 65px;
+      height: 65px;
+
+      background: #25d366;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      text-decoration: none;
+
+      font-size: 30px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+      z-index: 1000;
+    }
+
+    footer {
+      background: #030a10;
+      padding: 30px 25px;
+      text-align: center;
+      color: #71808a;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 900px) {
+
+      .menu {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .consultor-box {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 38px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .contact h2 {
+        font-size: 40px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <nav>
+
+    <div class="logo">
+      KAILON <span>RAIMERS</span>
+    </div>
+
+    <div class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#modelos">Piscinas</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#consultor">Consultor</a>
+    </div>
+
+    <a class="btn-menu"
+       href="https://wa.me/5511999999999"
+       target="_blank">
+
+      SOLICITAR ORÇAMENTO
+
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <div class="tag">
+        CONSULTOR ESPECIALIZADO EM PISCINAS
+      </div>
+
+      <h1>
+        A piscina dos seus sonhos começa <span>aqui.</span>
+      </h1>
+
+      <p>
+        Encontre o modelo ideal para transformar sua casa em um espaço
+        de lazer, conforto e experiências inesquecíveis.
+        Conte comigo para encontrar a solução perfeita para o seu projeto.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a class="btn-primary"
+           href="https://wa.me/5511999999999?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20uma%20piscina."
+           target="_blank">
+
+          QUERO MEU ORÇAMENTO
+
+        </a>
+
+        <a class="btn-secondary" href="#modelos">
+
+          CONHECER MODELOS
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MODELOS -->
+
+  <section class="models" id="modelos">
+
+    <div class="container">
+
+      <div class="section-tag">
+        ENCONTRE SUA PISCINA
+      </div>
+
+      <h2 class="section-title">
+        Sua piscina. Seu estilo.
+      </h2>
+
+      <p class="section-text">
+        Existem diferentes modelos, tamanhos e possibilidades para
+        criar um projeto que combine perfeitamente com sua casa,
+        sua família e seu estilo de vida.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <img
+            src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80"
+            alt="Piscina moderna">
+
+          <div class="card-content">
+
+            <h3>Piscinas Compactas</h3>
+
+            <p>
+              Soluções inteligentes para aproveitar cada espaço.
+            </p>
+
+            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20as%20piscinas%20compactas."
+               target="_blank">
+
+              QUERO CONHECER →
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <img
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+            alt="Piscina residencial">
+
+          <div class="card-content">
+
+            <h3>Piscinas Residenciais</h3>
+
+            <p>
+              Design, conforto e lazer para toda a família.
+            </p>
+
+            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20as%20piscinas%20residenciais."
+               target="_blank">
+
+              QUERO CONHECER →
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <img
+            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=80"
+            alt="Piscina de luxo">
+
+          <div class="card-content">
+
+            <h3>Projetos Premium</h3>
+
+            <p>
+              Piscinas para projetos que buscam exclusividade e sofisticação.
+            </p>
+
+            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20os%20projetos%20premium."
+               target="_blank">
+
+              QUERO CONHECER →
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DIFERENCIAIS -->
+
+  <section id="diferenciais">
+
+    <div class="container">
+
+      <div class="section-tag">
+        MAIS DO QUE UMA PISCINA
+      </div>
+
+      <h2 class="section-title">
+        Um projeto pensado para você.
+      </h2>
+
+      <div class="features">
+
+        <div class="feature">
+
+          <div class="feature-number">01</div>
+
+          <h3>Atendimento Personalizado</h3>
+
+          <p>
+            Entendo o seu projeto e ajudo você a encontrar a melhor solução.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-number">02</div>
+
+          <h3>Modelos e Tamanhos</h3>
+
+          <p>
+            Opções para diferentes espaços e estilos de projetos.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-number">03</div>
+
+          <h3>Personalização</h3>
+
+          <p>
+            Escolha acabamentos e acessórios para deixar sua piscina única.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-number">04</div>
+
+          <h3>Atendimento Direto</h3>
+
+          <p>
+            Fale diretamente comigo pelo WhatsApp e tire suas dúvidas.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONSULTOR -->
+
+  <section class="consultor" id="consultor">
+
+    <div class="container">
+
+      <div class="consultor-box">
+
+        <div>
+
+          <div class="section-tag" style="color:white">
+            SEU CONSULTOR
+          </div>
+
+          <h2>
+            Vamos tirar seu projeto do papel?
+          </h2>
+
+          <p>
+            Meu nome é <strong>Kailon Raimers</strong>.
+            Meu objetivo é ajudar você a encontrar a piscina ideal,
+            entendendo seu espaço, seu projeto e o que você realmente procura.
+          </p>
+
+          <a class="btn-secondary"
+             href="https://wa.me/5511999999999"
+             target="_blank">
+
+            FALAR COMIGO AGORA
+
+          </a>
+
+        </div>
+
+
+        <div class="consultor-card">
+
+          <h3>Kailon Raimers</h3>
+
+          <p>
+            Consultor de vendas especializado em projetos de piscinas.
+          </p>
+
+          <br>
+
+          <p>
+            📱 Atendimento direto pelo WhatsApp
+          </p>
+
+          <p>
+            🏊 Modelos para diferentes projetos
+          </p>
+
+          <p>
+            📐 Atendimento personalizado
+          </p>
+
+          <p>
+            💬 Tire suas dúvidas comigo
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTATO -->
+
+  <section class="contact">
+
+    <div class="container">
+
+      <div class="section-tag">
+        COMEÇE AGORA
+      </div>
+
+      <h2>
+        Sua nova área de lazer está a uma conversa de distância.
+      </h2>
+
+      <p>
+        Clique no botão abaixo, fale diretamente comigo e solicite
+        informações sobre modelos, tamanhos e possibilidades para
+        o seu projeto.
+      </p>
+
+      <a class="btn-primary"
+         href="https://wa.me/5511999999999?text=Olá%20Kailon!%20Vi%20seu%20site%20e%20quero%20falar%20sobre%20uma%20piscina."
+         target="_blank">
+
+        FALAR COM KAILON NO WHATSAPP
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<a class="whatsapp"
+   href="https://wa.me/5511999999999"
+   target="_blank">
+
+  ☏
+
+</a>
+
+
+<footer>
+
+  © 2026 Kailon Raimers — Consultor de Vendas de Piscinas
+
+</footer>
+
+</body>
+</html>
