@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Arita | Piscinas Compactas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111111;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .logo {
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .back {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 20px 70px;
+    }
+
+    .model-tag {
+      color: #a0a0a0;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 80px);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .measure {
+      color: #a5a5a5;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 420px;
+      background: linear-gradient(135deg, #1d4c59, #112d35);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #ffffff;
+      margin-bottom: 70px;
+    }
+
+    .section {
+      margin-bottom: 70px;
+    }
+
+    .section-label {
+      color: #8c8c8c;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .tiles {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .tile {
+      min-width: 130px;
+      height: 130px;
+      border-radius: 3px;
+      border: 1px solid #333333;
+      padding: 12px;
+      display: flex;
+      align-items: flex-end;
+      font-size: 13px;
+      cursor: pointer;
+      background: #1b1b1b;
+    }
+
+    .tile.active {
+      border: 2px solid #ffffff;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 12px;
+    }
+
+    .size {
+      padding: 15px 20px;
+      border: 1px solid #444444;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .size.active {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .technical {
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 45px 0;
+    }
+
+    .drawing {
+      width: 100%;
+      max-width: 600px;
+      height: 320px;
+      border: 1px solid #555;
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .specs {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .spec {
+      border-top: 1px solid #333;
+      padding-top: 12px;
+    }
+
+    .spec span {
+      display: block;
+      color: #888;
+      font-size: 11px;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .spec strong {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 70px;
+      text-align: center;
+      padding: 60px 20px;
+      background: #181818;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #999;
+      max-width: 500px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background: #ffffff;
+      color: #111111;
+      padding: 17px 28px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 18px;
+      }
+
+      .container {
+        padding: 30px 18px 50px;
+      }
+
+      .main-image {
+        height: 280px;
+        margin-bottom: 55px;
+      }
+
+      .section {
+        margin-bottom: 55px;
+      }
+
+      .section h2 {
+        font-size: 26px;
+      }
+
+      .tile {
+        min-width: 110px;
+        height: 110px;
+      }
+
+      .drawing {
+        height: 250px;
+      }
+
+      .specs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      KAILON RAIMERS
+    </div>
+
+    <a href="compactas.html" class="back">
+      ← VOLTAR
+    </a>
+
+  </header>
+
+
+  <main class="container">
+
+    <div class="model-tag">
+      PISCINAS COMPACTAS
+    </div>
+
+    <h1>ARITA</h1>
+
+    <div class="measure">
+      4,05 × 3,11 × 0,94 m
+    </div>
+
+
+    <div class="main-image">
+      FOTO DA PISCINA ARITA
+    </div>
+
+
+    <section class="section">
+
+      <div class="section-label">
+        PERSONALIZE SUA PISCINA
+      </div>
+
+      <h2>Escolha seu revestimento</h2>
+
+      <div class="tiles">
+
+        <div class="tile active">
+          Sarandi
+        </div>
+
+        <div class="tile">
+          Siro
+        </div>
+
+        <div class="tile">
+          Morea
+        </div>
+
+        <div class="tile">
+          Milos
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="section-label">
+        TAMANHO DA PASTILHA
+      </div>
+
+      <h2>Escolha o acabamento</h2>
+
+      <div class="sizes">
+
+        <button class="size active">
+          7,5 × 7,5 cm
+        </button>
+
+        <button class="size">
+          15 × 15 cm
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="technical">
+
+      <div class="section-label">
+        INFORMAÇÕES TÉCNICAS
+      </div>
+
+      <h2>Dimensões da Arita</h2>
+
+      <div class="drawing">
+        PLANTA BAIXA DA ARITA<br><br>
+        4,05 m × 3,11 m<br>
+        Profundidade: 0,94 m
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <span>COMPRIMENTO</span>
+          <strong>4,05 m</strong>
+        </div>
+
+        <div class="spec">
+          <span>LARGURA</span>
+          <strong>3,11 m</strong>
+        </div>
+
+        <div class="spec">
+          <span>PROFUNDIDADE</span>
+          <strong>0,94 m</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <h2>Gostou da Arita?</h2>
+
+      <p>
+        Fale comigo para conhecer as opções disponíveis e receber um atendimento personalizado para o seu projeto.
+      </p>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/554999978771?text=Olá%20Kailon!%20Quero%20receber%20mais%20informações%20sobre%20a%20piscina%20Arita."
+        target="_blank">
+
+        SOLICITAR ORÇAMENTO
+
+      </a>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
